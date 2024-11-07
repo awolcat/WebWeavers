@@ -1,43 +1,18 @@
 import React from 'react';
-import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin, Navigation } from 'lucide-react';
+
+import Navbar from './Navigation';
+import Hero from './Hero';
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-4 bg-white">
-        <div className="text-xl font-bold">Website Weavers</div>
-        <div className="flex gap-6">
-          <a href="#services" className="hover:text-blue-600">OUR SERVICES</a>
-          <a href="#why-us" className="hover:text-blue-600">WHY US</a>
-          <a href="#projects" className="hover:text-blue-600">PROJECTS</a>
-          <a href="#testimonials" className="hover:text-blue-600">TESTIMONIALS</a>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
-      <section className="px-6 py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl font-bold mb-6">Let us Build your Website</h1>
-              <p className="text-gray-600 mb-8">
-                Elevate your digital presence with our expert website design and development.
-                We craft bespoke solutions based on client's needs.
-              </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center gap-2">
-                Get Started
-                <ArrowRight size={20} />
-              </button>
-            </div>
-            <div className="bg-gray-200 h-64 rounded-lg">
-              {/* Placeholder for hero image */}
-              <img src="/api/placeholder/600/400" alt="Hero" className="w-full h-full object-cover rounded-lg" />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <Hero />
+      
       {/* Services Section */}
       <section id="services" className="px-6 py-16">
         <div className="max-w-6xl mx-auto">
