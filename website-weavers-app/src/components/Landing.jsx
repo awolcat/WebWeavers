@@ -3,6 +3,7 @@ import { ArrowRight, Mail, Phone, MapPin, Navigation } from 'lucide-react';
 
 import Navbar from './Navigation';
 import Hero from './Hero';
+import Carousel from './Carousel';
 
 
 const LandingPage = () => {
@@ -19,6 +20,7 @@ const LandingPage = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl mb-4 text-center">OUR</h2>
           <h2 className="text-3xl font-bold mb-12 text-center text-blue-600">SERVICES</h2>
+          <Carousel />
           {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 border rounded-lg">
               <h3 className="text-xl font-bold mb-4">Website Development</h3>
