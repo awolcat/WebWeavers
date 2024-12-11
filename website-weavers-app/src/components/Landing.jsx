@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 import Navbar from './Navigation';
 import Hero from './Hero';
@@ -24,12 +24,15 @@ const LandingPage = () => {
 
       {/* Recent Projects Section */}
       <RecentProjects />
-      
+
       {/* Contact Form Section */}
       <section id="contact" className="px-6 py-16">
-        <div className="max-w-4xl mx-auto flex flex-row">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2">
           <div>
-            <h2 className="text-3xl font-bold mb-8 text-center">Tell us about your project.</h2>
+            <h2 className="text-4xl font-bold mb-8 text-center">Tell us about</h2>
+            <h2 className="text-4xl font-bold mb-8 text-blue-500 text-center">your project.</h2>
+            <p>Let's figure out how to create an effective application,
+            its cost and terms of its development</p>
           </div>
           <div className=''>
             <form className="space-y-6">

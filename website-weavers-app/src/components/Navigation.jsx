@@ -4,11 +4,12 @@ import { Menu, X } from 'lucide-react';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navLinks = [
-      { href: '#about', text: 'OUR SERVICES' },
-      { href: '#products', text: 'WHY US' },
-      { href: '#enquiry', text: 'PROJECTS' },
+      { href: '#services', text: 'OUR SERVICES' },
+      { href: '#why-us', text: 'WHY US' },
+      { href: '#recent-projects', text: 'PROJECTS' },
       { href: '#contact', text: 'TESTIMONIALS' }
     ];
+    
     return (
         <nav className="flex items-center justify-between py-4 z-50 shadow-md bg-white sticky top-0">
           <div className="container mx-auto px-6">
@@ -21,7 +22,7 @@ const Navbar = () => {
                   <a
                     key={link.href}
                     href={link.href}
-                    onClick={(e) => scrollToSection(e, link.href)}
+                    // onClick={(e) => scrollToSection(e, link.href)}
                     className="hover:text-blue-600 transition-colors text-sm font-semibold"
                   >
                     {link.text}
@@ -49,7 +50,7 @@ const Navbar = () => {
                   <a
                     key={link.href}
                     href={link.href}
-                    onClick={(e) => scrollToSection(e, link.href)}
+                    // onClick={(e) => scrollToSection(e, link.href)}
                     className="block py-2 hover:text-blue-600 transition-colors"
                   >
                     {link.text}

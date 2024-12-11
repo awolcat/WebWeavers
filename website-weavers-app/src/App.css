@@ -4,6 +4,11 @@
   margin: 0 auto;
   overflow: clip;
   text-align: center;
+  
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 .logo {
