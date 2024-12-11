@@ -8,20 +8,6 @@ const Carousel = () => {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
-  // const items = [
-  //   { id: 1, content: 'Item 1', color: 'bg-red-200' },
-  //   { id: 2, content: 'Item 2', color: 'bg-blue-200' },
-  //   { id: 3, content: 'Item 3', color: 'bg-green-200' },
-  //   { id: 4, content: 'Item 4', color: 'bg-yellow-200' },
-  //   { id: 5, content: 'Item 5', color: 'bg-purple-200' },
-  //   { id: 6, content: 'Item 6', color: 'bg-pink-200' },
-  //   { id: 7, content: 'Item 7', color: 'bg-orange-200' },
-  //   { id: 8, content: 'Item 4', color: 'bg-yellow-200' },
-  //   { id: 9, content: 'Item 5', color: 'bg-purple-200' },
-  //   { id: 10, content: 'Item 6', color: 'bg-pink-200' },
-  //   { id: 11, content: 'Item 7', color: 'bg-orange-200' }
-  // ];
-
   const minSwipeDistance = 50;
 
   const handleTouchStart = (e) => {
@@ -64,8 +50,12 @@ const Carousel = () => {
   }, [nextSlide, prevSlide]);
 
   return (
+    <section id="services" className="w-full px-6 py-16 text-white">
+        <div className=" mx-auto">
+          <h2 className="text-xl mb-4 text-center">Our</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-blue-600">Services</h2>
     <div 
-      className="flex flex-col w-full mx-auto py-4 items-center overflow-hidden  h-[24rem]"
+      className="flex flex-col w-full mx-auto py-4 items-center overflow-hidden h-[36rem] lg:h-[24rem]"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -75,11 +65,12 @@ const Carousel = () => {
           <div 
             key={item.id}
             className={`
-              flex flex-col flex-shrink-0 flex-grow-1 w-40 h-fit text-left justify-between
+              flex flex-col flex-shrink-0 flex-grow-1 w-48 h-fit text-left justify-between
               text-slate-950 bg-neutral-50 opacity-100 rounded-lg shadow-lg
               transition-transform duration-300 cursor-pointer
               ${index === 2 ? 'scale-110 border border-solid border-blue-600' : 'scale-90 opacity-75'}
               px-4 py-6
+              md:w-72 md:h-60
               lg:w-72 lg:h-60
             `}
           >
@@ -93,18 +84,26 @@ const Carousel = () => {
       </div>
 
       <div className="flex justify-center mt-8 space-x-2">
-        {items.slice(0, 4).map((_, index) => (
-          <button
+        {items.slice(0, 5).map((_, index) => (
+          <div
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`
-              w-3 h-3 rounded-full transition-colors duration-300
-              ${currentIndex === index ? 'bg-blue-600' : 'bg-gray-300'}
+              w-4 h-4 cursor-pointer rounded-full transition-colors duration-300
+              ${index === 2 ? 'bg-blue-600' : 'bg-gray-300'}
             `}
-          />
+          >
+          </div>
         ))}
       </div>
     </div>
+    <div className="flex justify-center mt-8">
+          <button className="bg-blue-600 text-white px-12 py-3 rounded-lg flex items-center justify-center gap-2">
+                Get In Touch
+          </button>
+          </div>
+        </div>
+      </section>
   );
 };
 

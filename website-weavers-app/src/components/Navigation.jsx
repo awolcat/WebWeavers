@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between py-4 z-50 shadow-md bg-white sticky top-0">
           <div className="container mx-auto px-6">
             <div className="flex items-center justify-between h-16">
-              <a href="#" className="text-2xl text-blue-600 font-bold">WEBSITE WEAVERS</a>
+              <a href="#" className="text-2xl text-blue-600 font-bold justify-self-start text-left">WEBSITE WEAVERS</a>
           
               {/* Desktop Navigation */}
               <div className="hidden lg:flex space-x-8">
