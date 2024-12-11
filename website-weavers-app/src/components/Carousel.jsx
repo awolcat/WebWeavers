@@ -1,6 +1,4 @@
-import ServiceCarouselCard from './ServiceCarouselCard';
-
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import items from './productsList';
 
 const Carousel = () => {

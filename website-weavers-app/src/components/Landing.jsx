@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 import Navbar from './Navigation';
@@ -31,7 +30,7 @@ const LandingPage = () => {
           <div>
             <h2 className="text-4xl font-bold mb-8 text-center">Tell us about</h2>
             <h2 className="text-4xl font-bold mb-8 text-blue-500 text-center">your project.</h2>
-            <p>Let's figure out how to create an effective application,
+            <p>Lets figure out how to create an effective application,
             its cost and terms of its development</p>
           </div>
           <div className=''>

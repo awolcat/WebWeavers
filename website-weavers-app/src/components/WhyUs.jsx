@@ -11,7 +11,7 @@ const WhyUs = () => {
             <img src={whyUs.src} alt="Why Us" className="w-full h-96 object-cover " />
           </div>
           <p className="text-center text-gray-600 italic mb-12">
-            "The innovation consists in seeing what everyone has seen and in thinking what no one has thought."
+            The innovation consists in seeing what everyone has seen and in thinking what no one has thought.
           </p>
           <div className='max-w-6xl mx-auto'>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

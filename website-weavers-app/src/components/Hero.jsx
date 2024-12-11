@@ -11,7 +11,7 @@ const Hero = () => {
               <h1 className="text-4xl font-bold mb-4">Your Website</h1>
               <p className="text-gray-600 mb-6 text-left">
                 Elevate your digital presence with our expert website design and development.
-                We craft bespoke solutions based on client's needs.
+                We craft bespoke solutions based on client needs.
               </p>
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center gap-2">
                 Get Started
