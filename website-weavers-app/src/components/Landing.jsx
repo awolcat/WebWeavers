@@ -26,14 +26,14 @@ const LandingPage = () => {
 
       {/* Contact Form Section */}
       <section id="contact" className="px-6 py-16">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2">
-          <div>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 mb-4 gap-8 justify-items-center	">
+          <div className='mx-auto flex flex-col items-center'>
             <h2 className="text-4xl font-bold mb-8 text-center">Tell us about</h2>
             <h2 className="text-4xl font-bold mb-8 text-blue-500 text-center">your project.</h2>
-            <p>Lets figure out how to create an effective application,
+            <p className='w-full md:w-3/6 md:text-center lg:text-left'>Lets figure out how to create an effective application,
             its cost and terms of its development</p>
           </div>
-          <div className=''>
+          <div className='w-full md:w-4/6 lg:w-full'>
             <form className="space-y-6">
               <div>
                 <input
@@ -65,20 +65,28 @@ const LandingPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white px-6 py-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <footer className="bg-gray-900 text-white text-left px-0 ">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-24 lg:justify-items-center	">
+        <div>
+            <h3 className="font-bold mb-4">WEBSITE WEAVERS</h3>
+            <div className="flex items-start gap-2">
+              <p>
+                Elevate your digital presence with our expert website design and development. 
+                We craft bespoke solutions based on client needs.
+              </p>
+            </div>
+          </div>
           <div>
             <h3 className="font-bold mb-4">ADDRESS:</h3>
             <div className="flex items-start gap-2">
               <MapPin size={20} />
               <p>
-                Rr. Reshit Petrela, Kompleksi Usluga, Kati 2,
-                Tiranë - Albania, Nipt: L72206043S
+                Nairobi, Kenya
               </p>
             </div>
           </div>
           <div>
-            <h3 className="font-bold mb-4">CONTACT:</h3>
+            <h3 className="font-bold mb-4">CONTACT</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <Phone size={20} />
@@ -91,7 +99,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 text-center text-gray-400 text-sm">
+        <div className="mt-8 p-6 text-center text-gray-400 bg-gray-700 w-full text-sm">
           All Rights Reserved © 2024 WEBSITE WEAVERS
         </div>
       </footer>

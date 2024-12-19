@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import items from './productsList';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,12 +54,12 @@ const Carousel = () => {
           <h2 className="text-xl mb-4 text-center">Our</h2>
           <h2 className="text-3xl font-bold mb-12 text-center text-blue-600">Services</h2>
     <div 
-      className="flex flex-col w-full mx-auto py-4 items-center overflow-hidden h-[36rem] lg:h-[24rem]"
+      className="flex flex-col w-full mx-auto py-4 items-center overflow-hidden h-[30rem] lg:h-[26rem]"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="flex justify-center items-center h-full space-x-4 overflow-hidden">
+      <div className=" flex justify-center items-center h-full space-x-4 overflow-hidden">
         {items.slice(currentIndex, currentIndex + 5).map((item, index) => (
           <div 
             key={item.id}
@@ -68,12 +69,13 @@ const Carousel = () => {
               transition-transform duration-300 cursor-pointer
               ${index === 2 ? 'scale-110 border border-solid border-blue-600' : 'scale-90 opacity-75'}
               px-4 py-6
-              md:w-72 md:h-60
-              lg:w-72 lg:h-60
+              md:w-72 md:h-[16rem]
+              lg:w-72 lg:h-[16rem]
             `}
           >
+            
             <h2 className={`rounded-full border border-solid w-fit p-2
-                            ${index === 2 ? 'border-blue-600' : 'border-current'}`}>{item.icon}</h2>
+                            ${index === 2 ? 'border-blue-600 duration-700' : 'border-current'}`}>{item.icon}</h2>
             <h3 className={`text-xl font-bold
                             ${index === 2 ? 'text-blue-600' : 'text-current'}`}>{item.title}</h3>
             <p className=''>{item.content}</p>
@@ -81,19 +83,25 @@ const Carousel = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-8 space-x-2">
+      <div className="flex flex-row justify-center items-center mt-8 gap-4">
+        <ArrowLeft onClick={prevSlide} className="w-8 h-8 cursor-pointer" />
+        {/* Dots Navigation */}
+      <div className="flex justify-center space-x-2">
         {items.slice(0, 5).map((_, index) => (
           <div
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`
-              w-4 h-4 cursor-pointer rounded-full transition-colors duration-300
-              ${index === 2 ? 'bg-blue-600' : 'bg-gray-300'}
+              w-4 h-4 cursor-pointer rounded-full transition-colors delay-300 duration-700
+              ${index === 2 ? 'bg-blue-600 scale-110' : 'bg-gray-300 scale-90'}
             `}
-          >
+          > &nbsp;
           </div>
         ))}
       </div>
+          <ArrowRight onClick={nextSlide} className="w-8 h-8 cursor-pointer" />
+       
+        </div>
     </div>
     <div className="flex justify-center mt-8">
           <button className="bg-blue-600 text-white px-12 py-3 rounded-lg flex items-center justify-center gap-2">
