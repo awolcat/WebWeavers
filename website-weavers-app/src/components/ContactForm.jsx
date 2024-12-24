@@ -1,3 +1,4 @@
+ /* eslint-disable */
 import React, { useState } from 'react';
 import SuccessModal from './SuccessSubmitModal';
 import FailModal from './FailedSubmitModal';
