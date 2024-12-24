@@ -1,8 +1,25 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 2rem;
+  overflow: clip;
   text-align: center;
+  
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+#loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
 }
 
 .logo {
@@ -39,4 +56,80 @@
 
 .read-the-docs {
   color: #888;
+}
+
+@keyframes fadein-right {
+  from {
+    transform: translateX(-4em);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.fadein-right {
+  animation: fadein-right 1s;
+} 
+
+@keyframes fadein-left {
+  from {
+    transform: translateX(4em);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.fadein-left {
+  animation: fadein-left 1s;
+}
+
+@keyframes fadein-up {
+  from {
+    transform: translateY(2em);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fadein-up {
+  animation: fadein-up 1s;
+}
+
+@keyframes bounce-x {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.5em);
+  }
+}
+
+.animate-bounce-x {
+  animation: bounce-x 1s infinite;
+}
+
+.flip-card-inner {
+  transform: rotateY(180deg);
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.project-image {
+  overflow: hidden;
+}
+
+.project-image img {
+  transform: translateY(0);
+  transition: transform 5s ease-out;
+}
+
+.project-image:hover .scrollable {
+  object-fit: cover;
+  transform: translateY(calc(-100% + 240px));  
 }

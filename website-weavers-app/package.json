@@ -4,13 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
   },
   "dependencies": {
+    "google-auth-library": "^9.15.0",
+    "google-spreadsheet": "^4.1.4",
     "lucide-react": "^0.454.0",
+    "next": "^15.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -26,7 +29,6 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14",
-    "vite": "^5.4.10"
+    "tailwindcss": "^3.4.14"
   }
 }
