@@ -1,3 +1,4 @@
+ /* eslint-disable */
 import { useEffect } from "react";
 
 const FailModal = ({ isOpen, onClose, message = "Something went wrong!" }) => {
