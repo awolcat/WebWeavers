@@ -5,6 +5,7 @@ import Hero from './Hero';
 import Carousel from './Carousel';
 import WhyUs from './WhyUs';
 import RecentProjects from './RecentProjects';
+import ContactForm from './ContactForm';
 
 const LandingPage = () => {
   return (
@@ -25,44 +26,7 @@ const LandingPage = () => {
       <RecentProjects />
 
       {/* Contact Form Section */}
-      <section id="contact" className="px-6 py-16">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 mb-4 gap-8 justify-items-center	">
-          <div className='mx-auto flex flex-col items-center'>
-            <h2 className="text-4xl font-bold mb-8 text-center">Tell us about</h2>
-            <h2 className="text-4xl font-bold mb-8 text-blue-500 text-center">your project.</h2>
-            <p className='w-full md:w-3/6 md:text-center lg:text-left'>Lets figure out how to create an effective application,
-            its cost and terms of its development</p>
-          </div>
-          <div className='w-full md:w-4/6 lg:w-full'>
-            <form className="space-y-6">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full p-3 border rounded-lg"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="E-mail"
-                  className="w-full p-3 border rounded-lg"
-                />
-              </div>
-              <div>
-                <textarea
-                  placeholder="Message"
-                  rows={4}
-                  className="w-full p-3 border rounded-lg"
-                />
-              </div>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full">
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
+      <ContactForm />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white text-left px-0 ">
