@@ -6,6 +6,7 @@ import Carousel from './Carousel';
 import WhyUs from './WhyUs';
 import RecentProjects from './RecentProjects';
 import ContactForm from './ContactForm';
+import Stepper from './Steps';
 
 const LandingPage = () => {
   return (
@@ -25,6 +26,8 @@ const LandingPage = () => {
       {/* Recent Projects Section */}
       <RecentProjects />
 
+      {/* How It Works Section */}
+      <Stepper />
       {/* Contact Form Section */}
       <ContactForm />
 
