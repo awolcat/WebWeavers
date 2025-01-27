@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CrossIcon, Minus } from "lucide-react";
 
 import contact from "../assets/images/stepsImages/contact.svg";
 import plan from "../assets/images/stepsImages/planning.svg";
@@ -16,18 +17,21 @@ const Stepper = () => {
 
     return (
         <div>
-            <h1>Steps</h1>
-            <div className="flex flex-row p-8 gap-8 items-center justify-center">
+            <h1>How it works</h1>
+            <div className="flex flex-row p-8 gap-24 items-center justify-center">
                 <div className="flex flex-col w-1/4">
+                    <h2 className="text-4xl text-left mb-16 p-0 font-bold w-[30rem] ">
+                        Reach more customers online and increase credibility everywhere.
+                    </h2>
                     {steps.map((item, index) => (
                         <div key={index} className="flex flex-col w-full">
                             <div className="flex flex-row items-center ">
                                 <div
                                     className={`p-2 m-2 border-2 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer
-                                        ${index === step ? "bg-blue-500 text-white rotate-90" : "bg-white hover:bg-gray-100"}`}
+                                        ${index === step ? "bg-black text-white " : "bg-white hover:bg-gray-100"}`}
                                     onClick={() => setStep(index)}
                                 >
-                                    {index + 1}
+                                    {index === step ? <Minus size={20}/> : <CrossIcon size={20} />}
                                 </div>
                                 <div className="flex flex-col">
                                     <h3 className="font-bold">{item.heading}</h3>
@@ -44,6 +48,8 @@ const Stepper = () => {
                             </div>
                         </div>
                     ))}
+                    <button className="bg-black text-white w-3/4 justify-self-center self-center mt-16 px-6 py-3 rounded-lg flex justify-center items-center">
+                        Get Started </button>
                 </div>
                 <div className="w-2/4 m-4 p-4 h-[25rem] rounded-lg transition-all duration-300 ease-in-out bg-black">
                     <img src={steps[step].image.src} alt={steps[step].heading} className="w-full h-full object-cover translate-x-0" />
