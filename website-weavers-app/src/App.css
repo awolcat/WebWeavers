@@ -126,7 +126,7 @@
 
 .project-image img {
   transform: translateY(0);
-  transition: transform 5s ease-out;
+  transition: transform 10s ease-out;
 }
 
 .project-image:hover .scrollable {

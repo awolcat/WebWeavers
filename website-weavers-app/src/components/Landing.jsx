@@ -23,11 +23,12 @@ const LandingPage = () => {
       {/* Why Choose Us Section */}
       <WhyUs />
 
+      {/* How It Works Section */}
+      <Stepper />
+
       {/* Recent Projects Section */}
       <RecentProjects />
 
-      {/* How It Works Section */}
-      <Stepper />
       {/* Contact Form Section */}
       <ContactForm />
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CrossIcon, Minus } from "lucide-react";
 
 import contact from "../assets/images/stepsImages/contact.svg";
@@ -15,23 +15,38 @@ const Stepper = () => {
     ];
     const [step, setStep] = useState(0);
 
+    const [isPlaying, setIsPlaying] = useState(true);
+
+    // Auto-advance slides
+  useEffect(() => {
+    let intervalId;
+    if (isPlaying) {
+      intervalId = setInterval(() => {
+        setStep((prevIndex) => 
+          prevIndex === steps.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 10000);
+    }
+    return () => clearInterval(intervalId);
+  }, [isPlaying, steps.length]);
+
     return (
-        <div>
-            <h1>How it works</h1>
-            <div className="flex flex-row p-8 gap-24 items-center justify-center">
-                <div className="flex flex-col w-1/4">
-                    <h2 className="text-4xl text-left mb-16 p-0 font-bold w-[30rem] ">
-                        Reach more customers online and increase credibility everywhere.
-                    </h2>
+        <div className="ml-16">
+            <h1 className="text-3xl font-bold m-8 text-center">How it works</h1>
+            <h2 className="text-[36px] text-left p-0 font-bold w-full lg:w-[27rem] font-serif">
+                Reach more customers online and increase credibility everywhere.
+            </h2>
+            <div className="flex flex-row items-center justify-between flex-wrap-reverse lg:flex-nowrap">
+                <div className="flex flex-col sm:w-4/5 md:w-3/5 lg:w-2/5">
                     {steps.map((item, index) => (
                         <div key={index} className="flex flex-col w-full">
                             <div className="flex flex-row items-center ">
                                 <div
-                                    className={`p-2 m-2 border-2 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer
+                                    className={`p-2 m-2 border-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer
                                         ${index === step ? "bg-black text-white " : "bg-white hover:bg-gray-100"}`}
-                                    onClick={() => setStep(index)}
+                                    onClick={() => {setStep(index); setIsPlaying(false);}}
                                 >
-                                    {index === step ? <Minus size={20}/> : <CrossIcon size={20} />}
+                                    {index === step ? <Minus size={16}/> : <CrossIcon size={16} />}
                                 </div>
                                 <div className="flex flex-col">
                                     <h3 className="font-bold">{item.heading}</h3>
@@ -42,17 +57,23 @@ const Stepper = () => {
                                     ${index === step ? "opacity-100 translate-x-0" : "opacity-50 -translate-x-2"}
                                 `}
                             >
-                                <div className={`${index === step ? "h-auto p-4 text-left rounded mt-2 border-l-2 border-grey-500 ml-8": " hidden h-0"} `}>
+                                <div className={`${index === step ? "h-auto p-4 pr-16 text-left rounded mt-2 border-l-2 border-grey-500 ml-8": " hidden h-0"} `}>
                                     {item.content}
-                                </div> 
+                                    {isPlaying && (<div className="absolute left-0 top-0 w-[2px] ml-8 bg-black" 
+                                        style={{
+                                            animation: `lineProgressVertical 10s linear`,
+                                            height: '0'
+                                        }} />)}
+                                </div>
                             </div>
                         </div>
                     ))}
                     <button className="bg-black text-white w-3/4 justify-self-center self-center mt-16 px-6 py-3 rounded-lg flex justify-center items-center">
                         Get Started </button>
                 </div>
-                <div className="w-2/4 m-4 p-4 h-[25rem] rounded-lg transition-all duration-300 ease-in-out bg-black">
-                    <img src={steps[step].image.src} alt={steps[step].heading} className="w-full h-full object-cover translate-x-0" />
+                <div className="w-5/5 lg:w-3/5 m-4 ml-0 p-4 h-[35rem] rounded-lg bg-black self-end justify-self-end"
+                    >
+                    <img src={steps[step].image.src} alt={steps[step].heading} className="w-full h-full object-cover" />
                 </div>
             </div>
         </div>

@@ -7,8 +7,8 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto ">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-2 items-center">
             <div className="flex flex-col items-start text-left md:col-span-5 lg:col-span-4 fadein-right">
-              <h1 className="text-4xl mb-1">Let Us Build</h1>
-              <h1 className="text-4xl font-bold mb-4">Your Website</h1>
+              <h1 className="text-6xl mb-1">Let Us Build</h1>
+              <h1 className="text-6xl font-bold mb-4">Your Website</h1>
               <p className="text-gray-600 mb-6 text-left">
                 Elevate your digital presence with our expert website design and development.
                 We craft bespoke solutions based on client needs.
