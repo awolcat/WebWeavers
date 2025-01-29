@@ -7,9 +7,6 @@
   
 }
 
-* {
-  scroll-behavior: smooth;
-}
 
 #loading {
   display: inline-block;
@@ -87,9 +84,11 @@
 @keyframes fadein-up {
   from {
     transform: translateY(2em);
+    opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -126,7 +125,7 @@
 
 .project-image img {
   transform: translateY(0);
-  transition: transform 5s ease-out;
+  transition: transform 10s ease-out;
 }
 
 .project-image:hover .scrollable {
