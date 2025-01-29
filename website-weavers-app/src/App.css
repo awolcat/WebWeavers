@@ -7,9 +7,6 @@
   
 }
 
-* {
-  scroll-behavior: smooth;
-}
 
 #loading {
   display: inline-block;
@@ -87,9 +84,11 @@
 @keyframes fadein-up {
   from {
     transform: translateY(2em);
+    opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 

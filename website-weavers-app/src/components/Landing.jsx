@@ -10,7 +10,7 @@ import Stepper from './Steps';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen ">
       {/* Navigation */}
       <Navbar />
 
@@ -36,7 +36,7 @@ const LandingPage = () => {
       <footer className="bg-gray-900 text-white text-left px-0 ">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-24 lg:justify-items-center	">
         <div>
-            <h3 className="font-bold mb-4">WEBSITE WEAVERS</h3>
+            <h3 className="font-bold mb-4 text-blue-600">WEBSITE WEAVERS</h3>
             <div className="flex items-start gap-2">
               <p>
                 Elevate your digital presence with our expert website design and development. 
@@ -45,24 +45,29 @@ const LandingPage = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-bold mb-4">ADDRESS:</h3>
+            <h3 className="font-bold mb-4 text-blue-600">ADDRESS:</h3>
             <div className="flex items-start gap-2">
-              <MapPin size={20} />
-              <p>
-                Nairobi, Kenya
+              <MapPin size={20} className='text-blue-600'/>
+              <p><a href='https://maps.app.goo.gl/VUPW8VKJPm3ohHKNA' target='_blank' rel='origin'>
+                  Nairobi, Kenya
+                </a>
               </p>
             </div>
           </div>
           <div>
-            <h3 className="font-bold mb-4">CONTACT</h3>
+            <h3 className="font-bold mb-4 text-blue-600">CONTACT</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <Phone size={20} />
-                <p>+355 (0) 694045400</p>
+                <Phone size={20} className='text-blue-600'/>
+                <p><a href="tel:+254705112734">+254 705112734</a></p>
               </div>
               <div className="flex items-center gap-2">
-                <Mail size={20} />
-                <p>info@rayonit.com</p>
+                <Phone size={20} className='text-blue-600'/>
+                <p><a href="tel:+254707033084">+254 707033084</a></p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone size={20} className='text-blue-600'/>
+                <p><a href="tel:+254712697989">+254 712697989</a></p>
               </div>
             </div>
           </div>

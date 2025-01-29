@@ -34,7 +34,7 @@ const WhyUs = () => {
     return (
         <section id="why-us" className="px-0 py-16 bg-gray-50">
         <div className=" mx-0 flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-bold mb-4 text-center">Why choose us</h2>
+          <h2 className="text-3xl font-bold m-6 text-center">Why choose us</h2>
           <h2 className="text-3xl text-blue-500 font-bold mb-12 text-center">On your next project</h2>
           <div className="flex flex-col gap-8 w-5/6">
             {/*<div className='w-full px-0 h-96 rounded-lg overflow-hidden'>

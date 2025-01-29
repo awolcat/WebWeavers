@@ -31,9 +31,9 @@ const Stepper = () => {
   }, [isPlaying, steps.length]);
 
     return (
-        <div className="ml-16">
+        <div id="how-to" className="ml-16">
             <h1 className="text-3xl font-bold m-8 text-center">How it works</h1>
-            <h2 className="text-[36px] text-left p-0 font-bold w-full lg:w-[27rem] font-serif">
+            <h2 className="text-[36px] text-left p-0 font-bold w-full lg:w-[27rem] font-serif fadein-up">
                 Reach more customers online and increase credibility everywhere.
             </h2>
             <div className="flex flex-row items-center justify-between flex-wrap-reverse lg:flex-nowrap">
@@ -68,8 +68,11 @@ const Stepper = () => {
                             </div>
                         </div>
                     ))}
-                    <button className="bg-black text-white w-3/4 justify-self-center self-center mt-16 px-6 py-3 rounded-lg flex justify-center items-center">
-                        Get Started </button>
+                    <a href="#contact">
+                        <button className="bg-black text-white w-3/4 justify-self-center self-center mt-16 px-6 py-3 rounded-lg flex justify-center items-center hover:scale-105 transition-transform duration-300">
+                            Get Started 
+                        </button>
+                    </a>
                 </div>
                 <div className="w-5/5 lg:w-3/5 m-4 ml-0 p-4 h-[35rem] rounded-lg bg-black self-end justify-self-end"
                     >

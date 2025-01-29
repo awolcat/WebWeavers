@@ -52,6 +52,7 @@ const ContactForm = () => {
         <FailModal isOpen={true}
                    onClose={() => setStatus('idle')} />
       )}
+        <h1 className="text-3xl font-bold mb-16 mt-8 text-center">Contact us</h1>
         <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 mb-4 gap-8 justify-items-center	">
           <div className='mx-auto flex flex-col items-center'>
             <h2 className="text-4xl font-bold mb-8 text-center">Tell us about</h2>
