@@ -30,7 +30,7 @@ const Carousel = () => {
     setCurrentIndex((prev) => 
       prev < items.length - 5 ? prev + 1 : 0
     );
-  }, [items.length]);
+  }, []);
 
   const prevSlide = useCallback(() => {
     setCurrentIndex((prev) => 
