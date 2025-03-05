@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "framer-motion": "^12.4.10",
     "google-auth-library": "^9.15.0",
     "google-spreadsheet": "^4.1.4",
     "lucide-react": "^0.454.0",

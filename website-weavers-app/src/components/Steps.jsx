@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { CrossIcon, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import contact from "../assets/images/stepsImages/contact.svg";
 import plan from "../assets/images/stepsImages/planning.svg";
@@ -31,7 +32,7 @@ const Stepper = () => {
   }, [isPlaying, steps.length]);
 
     return (
-        <div id="how-to" className="ml-16">
+        <div id="how-to" className="ml-4 md:ml-16">
             <h1 className="text-3xl font-bold m-8 text-center">How it works</h1>
             <h2 className="text-[36px] text-left p-0 font-bold w-full lg:w-[27rem] font-serif fadein-up">
                 Reach more customers online and increase credibility everywhere.
@@ -74,10 +75,22 @@ const Stepper = () => {
                         </button>
                     </a>
                 </div>
-                <div className="w-5/5 lg:w-3/5 m-4 ml-0 p-4 h-[35rem] rounded-lg bg-black self-end justify-self-end"
+                <AnimatePresence mode="wait">
+                    <motion.div 
+                        key={step}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="w-5/5 lg:w-3/5 m-4 ml-0 p-4 md:h-[35rem] rounded-lg bg-black self-end justify-self-end"
                     >
-                    <img src={steps[step].image.src} alt={steps[step].heading} className="w-full h-full object-cover" />
-                </div>
+                        <img 
+                            src={steps[step].image.src} 
+                            alt={steps[step].heading} 
+                            className="w-full h-full object-contain md:object-cover" 
+                        />
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </div>
     );

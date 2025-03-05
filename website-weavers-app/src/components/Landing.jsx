@@ -7,6 +7,8 @@ import WhyUs from './WhyUs';
 import RecentProjects from './RecentProjects';
 import ContactForm from './ContactForm';
 import Stepper from './Steps';
+import Services from './Services';
+import productsList from './productsList';
 
 const LandingPage = () => {
   return (
@@ -18,7 +20,7 @@ const LandingPage = () => {
       <Hero />
       
       {/* Services Section */}
-      <Carousel />     
+      <Services products={productsList} />
 
       {/* Why Choose Us Section */}
       <WhyUs />
