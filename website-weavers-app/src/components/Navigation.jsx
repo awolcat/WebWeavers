@@ -51,15 +51,15 @@ const Navbar = () => {
             </div>
 
           {/* Mobile Navigation */}
-          <div className={`lg:hidden transition-all duration-500 w-full text-center
-                          ${isMenuOpen ? 'max-h-64 opacity-100 bg-white text-slate-600'
+          <div className={`lg:hidden transition-all duration-500 w-full text-center 
+                          ${isMenuOpen ? 'max-h-64 opacity-100 bg-transparent text-slate-600'
                                        :'max-h-0 opacity-0'} overflow-hidden`}>
-            <div className="pb-4 space-y-2">
+            <div className="pb-4 space-y-2 bg-transparent">
               {navLinks.map(link => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="block py-2 hover:text-blue-600 transition-colors"
+                    className="block py-2 hover:text-blue-600 transition-colors font-semibold"
                   >
                     {link.text}
                   </a>

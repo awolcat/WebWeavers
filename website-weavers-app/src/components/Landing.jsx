@@ -1,8 +1,7 @@
-import { Phone, MapPin } from 'lucide-react';
+import { MapPin, Mail } from 'lucide-react';
 
 import Navbar from './Navigation';
 import Hero from './Hero';
-import Carousel from './Carousel';
 import WhyUs from './WhyUs';
 import RecentProjects from './RecentProjects';
 import ContactForm from './ContactForm';
@@ -36,7 +35,7 @@ const LandingPage = () => {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white text-left px-0 ">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-24 lg:justify-items-center	">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-12 lg:justify-items-center	">
         <div>
             <h3 className="font-bold mb-4 text-blue-600">WEBSITE WEAVERS</h3>
             <div className="flex items-start gap-2">
@@ -60,16 +59,8 @@ const LandingPage = () => {
             <h3 className="font-bold mb-4 text-blue-600">CONTACT</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <Phone size={20} className='text-blue-600'/>
-                <p><a href="tel:+254705112734">+254 705112734</a></p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone size={20} className='text-blue-600'/>
-                <p><a href="tel:+254707033084">+254 707033084</a></p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone size={20} className='text-blue-600'/>
-                <p><a href="tel:+254712697989">+254 712697989</a></p>
+                <Mail size={20} className='text-blue-600'/>
+                <p><a href="mailto:websiteweavers@gmail.com">websiteweavers@gmail.com</a></p>
               </div>
             </div>
           </div>
