@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[60vh] bg-[#191919] overflow-hidden">
+      <section className="relative h-[60vh] bg-[#191919] overflow-hidden mx-4 rounded-lg">
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A66C2]/90 to-[#191919]/90" />
         <div className="relative container mx-auto px-6 h-full flex items-center">
           <div className="max-w-2xl">
@@ -47,7 +47,7 @@ const AboutUs = () => {
                 { icon: <Workflow className="w-8 h-8 text-[#0A66C2]" />, text: "Efficient Process" },
                 { icon: <Award className="w-8 h-8 text-[#0A66C2]" />, text: "Quality Work" }
               ].map((item, index) => (
-                <div key={index} className="p-6 bg-gray-50 rounded-lg text-center">
+                <div key={index} className="p-6 bg-gray-50 rounded-lg text-center grid grid-cols-2 gap-2 items-center justify-items-center">
                   {item.icon}
                   <p className="mt-2 font-semibold">{item.text}</p>
                 </div>
@@ -132,7 +132,7 @@ const AboutUs = () => {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to elevate your digital presence?</h2>
           <p className="mb-8">Get in touch with us today to discuss your project.</p>
-          <a href="#contact">
+          <a href="/#contact">
             <button className="bg-[#0A66C2] text-white px-8 py-3 rounded-lg flex items-center gap-2 mx-auto hover:bg-[#004182] transition-colors">
               Contact Us
               <ArrowRight size={20} />

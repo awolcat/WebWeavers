@@ -32,9 +32,8 @@ const Services = ({ products }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 items-center mb-12">
           <h2 className="text-5xl font-bold text-left">Our Services.</h2>
           <div className="md:justify-self-end">
-            <button className="bg-[#0A66C2] text-white px-6 py-3 rounded-full hover:bg-[#004182] transition-colors flex items-center gap-2">
-              Explore More
-              <span className="text-xl">→</span>
+            <button disabled className="bg-[#0A66C2] text-white px-6 py-3 rounded-full cursor-default transition-colors flex items-center gap-2">
+              End to End Services
             </button>
           </div>
         </div>
