@@ -5,15 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Services = ({ products }) => {
   const [selectedService, setSelectedService] = useState(products[0]);
 
-  // Service images mapping (you'll need to add your actual image paths)
-  const serviceImages = {
-    'UI/UX Design': '/images/uiux.webp',
-    'Digital Presence': '/images/digitalpresence.webp',
-    'Website Development': '/images/web.webp',
-    'Software Development': '/images/webdev.svg',
-  };
-
-  // Icon mapping (you can customize these or use your actual icons)
+  
+  // Icon mapping TODO move to productsList.js
   const serviceIcons = {
     'UI/UX Design': '🎨',
     'Digital Presence': '🌐',
