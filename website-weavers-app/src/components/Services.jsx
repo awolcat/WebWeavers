@@ -7,10 +7,10 @@ const Services = ({ products }) => {
 
   // Service images mapping (you'll need to add your actual image paths)
   const serviceImages = {
-    'UI/UX Design': '/images/uiux.jpg',
-    'Digital Presence': '/images/digital.jpg',
-    'Website Development': '/images/webdev.jpg',
-    'Software Development': '/images/software.jpg',
+    'UI/UX Design': '/images/uiux.webp',
+    'Digital Presence': '/images/digitalpresence.webp',
+    'Website Development': '/images/web.webp',
+    'Software Development': '/images/webdev.svg',
   };
 
   // Icon mapping (you can customize these or use your actual icons)
@@ -95,7 +95,7 @@ const Services = ({ products }) => {
               className="relative h-[400px]"
             >
               <img 
-                src={serviceImages[selectedService.title]} 
+                src={selectedService.image} 
                 alt={selectedService.title}
                 className="w-full h-full object-cover rounded-3xl"
               />
