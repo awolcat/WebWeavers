@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -6,6 +7,7 @@ const Navbar = () => {
     const navLinks = [
       { href: '/#services', text: 'OUR SERVICES' },
       { href: '/#why-us', text: 'WHY US' },
+      { href: '/about', text: 'ABOUT'},
       { href: '/#recent-projects', text: 'PROJECTS' },
       { href: '/#how-to', text: 'HOW-TO' }
     ];
@@ -14,7 +16,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between py-4 z-50 shadow-md bg-white/80 backdrop-blur-md sticky top-4 m-4 rounded-lg">
           <div className="container mx-auto px-6">
             <div className="flex items-center justify-between h-16">
-              <a href="#" className="text-2xl text-blue-600 font-bold justify-self-start text-left hover:text-blue-600">WEBSITE WEAVERS</a>
+              <a href="/" className="text-2xl text-blue-600 font-bold justify-self-start text-left hover:text-blue-600">WEBSITE WEAVERS</a>
           
               {/* Desktop Navigation */}
               <div className="hidden lg:flex space-x-8">

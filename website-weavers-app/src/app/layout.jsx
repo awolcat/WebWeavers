@@ -1,4 +1,6 @@
 import '../index.css';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navigation';
 
 export const metadata = {
     title: 'Website Weavers',
@@ -10,7 +12,9 @@ export default function RootLayout({ children }) {
             <html lang="en">
               
                 <body>
+                    <Navbar />
                     <div id="root" className="dark">{children}</div>
+                    <Footer />
                 </body>
             </html>
     )

@@ -79,10 +79,10 @@ const Services = ({ products }) => {
               <p className="text-gray-400 mb-6">
                 {selectedService.content}
               </p>
-              <button className="bg-[#0A66C2] text-white px-6 py-3 rounded-full hover:bg-[#004182] transition-colors flex items-center gap-2">
+              <a href="#contact" className="bg-[#0A66C2] text-white px-6 py-3 rounded-full hover:bg-[#004182] transition-colors flex items-center gap-2 w-fit">
                 Let's Chat
                 <span>🎧</span>
-              </button>
+              </a>
             </motion.div>
           </AnimatePresence>
 
