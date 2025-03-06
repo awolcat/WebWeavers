@@ -1,6 +1,5 @@
 'use client';
 import '../../index.css';
-import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, ArrowRight, Users, Target, Workflow, Award } from 'lucide-react';
 
