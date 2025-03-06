@@ -24,7 +24,7 @@ const RecentProjects = () => {
         <section id='recent-projects' className="px-6 py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Recent Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => {
                 return (
                 <div key={index} className="rounded-lg shadow-2xl project-container">
