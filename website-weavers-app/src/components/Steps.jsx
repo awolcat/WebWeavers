@@ -44,7 +44,7 @@ const Stepper = () => {
                             <div className="flex flex-row items-center ">
                                 <div
                                     className={`p-2 m-2 border-2 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer
-                                        ${index === step ? "bg-black text-white " : "bg-white hover:bg-gray-100"}`}
+                                        ${index === step ? "bg-black text-white dark:bg-white dark:text-black" : "bg-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800"}`}
                                     onClick={() => {setStep(index); setIsPlaying(false);}}
                                 >
                                     {index === step ? <Minus size={16}/> : <CrossIcon size={16} />}
@@ -58,9 +58,9 @@ const Stepper = () => {
                                     ${index === step ? "opacity-100 translate-x-0" : "opacity-50 -translate-x-2"}
                                 `}
                             >
-                                <div className={`${index === step ? "h-auto p-4 pr-16 text-left rounded mt-2 border-l-2 border-grey-500 ml-8": " hidden h-0"} `}>
+                                <div className={`${index === step ? "h-auto p-4 pr-16 text-left ml-8": " hidden h-0"} `}>
                                     {item.content}
-                                    {isPlaying && (<div className="absolute left-0 top-0 w-[2px] ml-8 bg-black" 
+                                    {isPlaying && (<div className="absolute left-0 top-0 w-[2px] ml-8 bg-black dark:bg-white" 
                                         style={{
                                             animation: `lineProgressVertical 10s linear`,
                                             height: '0'

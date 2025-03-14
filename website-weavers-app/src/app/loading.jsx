@@ -2,10 +2,27 @@ import Weavers from '../assets/images/weavers.svg';
 
 const Loading = () => {
     return (
-        <div className="relative min-h-screen min-w-full flex items-center justify-center">
-            <div className="relative inset-0 top-50 left-50 w-2/5 h-2/5">
-                <img src={Weavers.src} alt='logo' className='logo animate-spin object-cover'/>
-            </div>
+        <div className="flex flex-col items-center">
+          <svg className="h-16 w-16 mb-4 animate-spin text-blue-600" viewBox="0 0 24 24">
+            {/* Outer circle with gap */}
+            <circle 
+              cx="12" 
+              cy="12" 
+              r="10" 
+              stroke="currentColor" 
+              strokeWidth="4" 
+              fill="none" 
+              strokeDasharray="40 60"
+            />
+            {/* Inner dot */}
+            <circle 
+              cx="12" 
+              cy="2" 
+              r="2" 
+              fill="currentColor" 
+            />
+          </svg>
+          <p className="text-lg font-medium text-gray-700">Loading...</p>
         </div>
     );
 };

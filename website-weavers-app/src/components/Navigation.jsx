@@ -1,34 +1,40 @@
 'use client';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import { useSelectedLayoutSegment } from 'next/navigation';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navLinks = [
-      { href: '/#services', text: 'OUR SERVICES' },
-      { href: '/#why-us', text: 'WHY US' },
-      { href: '/about', text: 'ABOUT'},
-      { href: '/#recent-projects', text: 'PROJECTS' },
-      { href: '/#how-to', text: 'HOW-TO' }
+      { href: '/#services', text: 'OUR SERVICES', active: 'services' },
+      { href: '/#why-us', text: 'WHY US', active: 'why-us' },
+      { href: '/about', text: 'ABOUT', active: 'about'},
+      { href: '/#recent-projects', text: 'PROJECTS', active: 'projects' },
+      { href: '/#how-to', text: 'HOW-TO', active: 'how-to' }
     ];
+    const activeSegment = useSelectedLayoutSegment()
     
     return (
-        <nav className="flex items-center justify-between py-4 z-50 shadow-md bg-white/80 backdrop-blur-md sticky top-4 m-4 rounded-lg">
-          <div className="container mx-auto px-6">
+        <nav className="flex flex-col items-center justify-between py-4 z-50 shadow-md bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-4 m-4 dark:mt-0 rounded-lg">
+          <div className="container mx-auto px-6 relative">
             <div className="flex items-center justify-between h-16">
-              <a href="/" className="text-2xl text-blue-600 font-bold justify-self-start text-left hover:text-blue-600">WEBSITE WEAVERS</a>
+              <a href="/" className="text-2xl text-blue-600 dark:text-blue-400 font-bold justify-self-start text-left hover:text-blue-600">
+                WEBSITE WEAVERS
+              </a>
           
               {/* Desktop Navigation */}
               <div className="hidden lg:flex space-x-8">
                 {navLinks.map(link => (
-                  <a
+                  <Link
                     key={link.href}
                     href={link.href}
-                    // onClick={(e) => scrollToSection(e, link.href)}
-                    className="hover:text-blue-600 transition-colors text-sm font-semibold"
+                    className={`text-gray-900 hover:text-blue-600 dark:hover:text-blue-400 
+                                transition-colors text-sm font-semibold dark:text-white
+                                ${activeSegment === link.active ? 'border-b-4 border-blue-600': ''}`}
                   >
                     {link.text}
-                  </a>
+                  </Link>
                 ))}
               </div>
 
@@ -41,7 +47,7 @@ const Navbar = () => {
                   {isMenuOpen ? <X /> : <Menu />}
                 </button>
                 <a href="#contact">
-                  <button className="relative bg-blue-600 hidden text-white px-6 py-3 rounded-lg items-center lg:flex">
+                  <button className="relative bg-blue-600 hidden text-white px-6 py-3 rounded-lg items-center lg:flex dark:bg-blue-500">
                     <span className="absolute flex h-3 w-3 -top-1 -right-1">
                       <span className="animate-ping absolute inline-flex top-0 right-0 h-full w-full rounded-full bg-slate-50 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-400"></span>
@@ -53,19 +59,21 @@ const Navbar = () => {
             </div>
 
           {/* Mobile Navigation */}
-          <div className={`lg:hidden transition-all duration-500 w-full text-center 
-                          ${isMenuOpen ? 'max-h-64 opacity-100 bg-transparent text-slate-600'
-                                       :'max-h-0 opacity-0'} overflow-hidden`}>
-            <div className="pb-4 space-y-2 bg-transparent">
-              {navLinks.map(link => (
+          <div className={`lg:hidden transition-all duration-500 absolute w-full left-0 ${
+            isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}>
+            <div className="bg-white dark:bg-gray-800 text-slate-600 dark:text-gray-200 shadow-lg rounded-lg mt-2">
+              <div className="pb-4 space-y-2">
+                {navLinks.map(link => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="block py-2 hover:text-blue-600 transition-colors font-semibold"
+                    className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors px-6"
                   >
                     {link.text}
                   </a>
                 ))}
+              </div>
             </div>
           </div>
         </div>

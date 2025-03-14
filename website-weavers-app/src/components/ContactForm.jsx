@@ -67,7 +67,7 @@
                    type="text"
                    placeholder="Name"
                    required
-                   className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                   className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 dark:bg-gray-900 dark:text-white dark:border-white dark:outline-none dark:ring-2 dark:ring-blue-500/50"
                    value={formData.name}
                    onChange={(e) => setFormData({...formData, name: e.target.value})}
                  />
@@ -77,7 +77,7 @@
                    type="email"
                    placeholder="E-mail"
                    required
-                   className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                   className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 dark:bg-gray-900 dark:text-white dark:border-white dark:outline-none dark:ring-2 dark:ring-blue-500/50"
                    value={formData.email}
                    onChange={(e) => setFormData({...formData, email: e.target.value})}
                  />
@@ -88,7 +88,7 @@
                    rows={4}
                    style={{resize: 'none'}}
                    required
-                   className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                   className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 dark:bg-gray-900 dark:text-white dark:border-white dark:outline-none dark:ring-2 dark:ring-blue-500/50"
                    value={formData.message}
                    onChange={(e) => setFormData({...formData, message: e.target.value})}
                  />
