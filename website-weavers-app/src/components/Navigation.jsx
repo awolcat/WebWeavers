@@ -30,7 +30,7 @@ const Navbar = () => {
                     key={link.href}
                     href={link.href}
                     className={`text-gray-900 hover:text-blue-600 dark:hover:text-blue-400 
-                                transition-colors text-sm font-semibold dark:text-white
+                                transition-all text-sm font-semibold dark:text-white
                                 ${activeSegment === link.active ? 'border-b-4 border-blue-600': ''}`}
                   >
                     {link.text}

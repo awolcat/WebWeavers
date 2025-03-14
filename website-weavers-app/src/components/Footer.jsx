@@ -2,7 +2,7 @@ import { MapPin, Mail } from 'lucide-react';
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 text-white text-left px-0 ">
+        <footer className="bg-gray-900 text-white text-left px-0">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-12 lg:justify-items-center	">
         <div>
             <h3 className="font-bold mb-4 text-blue-600">WEBSITE WEAVERS</h3>
