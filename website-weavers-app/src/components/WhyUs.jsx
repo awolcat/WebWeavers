@@ -32,7 +32,7 @@ const WhyUs = () => {
     ];
 
     return (
-        <section id="why-us" className="px-0 py-16 bg-gray-50">
+        <section id="why-us" className="px-0 py-16 bg-gray-50 dark:bg-gray-900 dark:text-white">
         <div className=" mx-0 flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold m-6 text-center">Why choose us</h2>
           <h2 className="text-3xl text-blue-500 font-bold mb-12 text-center">On your next project</h2>
@@ -58,7 +58,7 @@ const WhyUs = () => {
             <div className=''>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {reasons.map((reason, index) => (
-                  <div key={index} className={`p-8 rounded-md transition duration-300 ${activeImage === index ? 'bg-slate-200' : 'bg-none'} hover:bg-slate-200 cursor-pointer shadow-lg flex flex-col justify-center`}
+                  <div key={index} className={`p-8 rounded-md transition duration-300 ${activeImage === index ? 'bg-slate-200 dark:bg-gray-900 dark:border-2 dark:border-white' : 'bg-none'} hover:bg-slate-200 dark:hover:text-white dark:border-white cursor-pointer shadow-lg flex flex-col justify-center`}
                     onMouseEnter={() => setActiveImage(index)}
                     >
                     <div className='flex flex-row gap-4 mb-4 items-center'>

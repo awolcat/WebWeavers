@@ -1,4 +1,4 @@
-
+'use client';
 import Hero from './Hero';
 import WhyUs from './WhyUs';
 import RecentProjects from './RecentProjects';
@@ -6,31 +6,39 @@ import ContactForm from './ContactForm';
 import Stepper from './Steps';
 import Services from './Services';
 import productsList from './productsList';
-
+import ScrollAnimation from './ScrollAnimation';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       
-      {/* Hero Section */}
+      {/* Hero Section - No animation needed as it's the first thing visible */}
       <Hero />
       
       {/* Services Section */}
-      <Services products={productsList} />
+      <ScrollAnimation>
+        <Services products={productsList} />
+      </ScrollAnimation>
 
       {/* Why Choose Us Section */}
-      <WhyUs />
+      <ScrollAnimation>
+        <WhyUs />
+      </ScrollAnimation>
 
       {/* How It Works Section */}
-      <Stepper />
+      <ScrollAnimation>
+        <Stepper />
+      </ScrollAnimation>
 
       {/* Recent Projects Section */}
-      <RecentProjects />
+      <ScrollAnimation>
+        <RecentProjects />
+      </ScrollAnimation>
 
       {/* Contact Form Section */}
-      <ContactForm />
-
-  
+      <ScrollAnimation>
+        <ContactForm />
+      </ScrollAnimation>
     </div>
   );
 };
