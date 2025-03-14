@@ -1,4 +1,3 @@
-import Weavers from '../assets/images/weavers.svg';
 
 const Loading = () => {
     return (
