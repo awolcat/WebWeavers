@@ -1,9 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
 const Services = ({ products }) => {
-  const [selectedService, setSelectedService] = useState(products[0]);
+  const [step, setStep] = useState(0);
+
+    const [isPlaying, setIsPlaying] = useState(true);
+
+    // Auto-advance slides
+  useEffect(() => {
+    let intervalId;
+    if (isPlaying) {
+      intervalId = setInterval(() => {
+        setStep((prevIndex) => 
+          prevIndex === products.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 8000);
+    }
+    return () => clearInterval(intervalId);
+  }, [isPlaying, products.length]);
 
   
   // Icon mapping TODO move to productsList.js
@@ -39,9 +54,9 @@ const Services = ({ products }) => {
           {products.map((service) => (
             <button
               key={service.id}
-              onClick={() => setSelectedService(service)}
+              onClick={() => {setStep(service.id - 1); setIsPlaying(false)}}
               className={`px-6 py-3 rounded-full transition-colors flex items-center gap-2 ${
-                selectedService.id === service.id
+                products[step].id === service.id
                   ? 'bg-[#0A66C2] text-white'
                   : 'bg-[#242424] hover:bg-[#2D2D2D] text-white'
               }`}
@@ -55,7 +70,7 @@ const Services = ({ products }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <AnimatePresence mode="wait">
             <motion.div
-              key={selectedService.id}
+              key={products[step].id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -64,12 +79,12 @@ const Services = ({ products }) => {
             >
               <div className="mb-6">
                 <span className="text-[#70B5F9] text-2xl">
-                  {serviceIcons[selectedService.title]}
+                  {serviceIcons[products[step].title]}
                 </span>
               </div>
-              <h3 className="text-3xl font-bold mb-4">{selectedService.title}</h3>
+              <h3 className="text-3xl font-bold mb-4">{products[step].title}</h3>
               <p className="text-gray-400 mb-6">
-                {selectedService.content}
+                {products[step].content}
               </p>
               <a href="#contact" className="bg-[#0A66C2] text-white px-6 py-3 rounded-full hover:bg-[#004182] transition-colors flex items-center gap-2 w-fit">
                 Let's Chat
@@ -80,7 +95,7 @@ const Services = ({ products }) => {
 
           <AnimatePresence mode="wait">
             <motion.div
-              key={selectedService.id}
+              key={products[step].id}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
@@ -88,8 +103,8 @@ const Services = ({ products }) => {
               className="relative h-[400px]"
             >
               <img 
-                src={selectedService.image} 
-                alt={selectedService.title}
+                src={products[step].image} 
+                alt={products[step].title}
                 className="w-full h-full object-cover rounded-3xl"
               />
             </motion.div>
