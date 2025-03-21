@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     return (
             <html lang="en">
               
-                <body className="dark:bg-gray-900 dark:text-white dark:pt-4">
+                <body className="dark:bg-gray-900 dark:text-white transition-all ease-in-ease-out 3s">
                     <Navbar />
                     <div className='z-50 fixed right-4 bottom-4'>
                         <ThemeToggle />
