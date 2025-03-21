@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <Mail size={20} className='text-blue-600'/>
-                <p><a href="mailto:websiteweavers@gmail.com">websiteweavers@gmail.com</a></p>
+                <p><a href="mailto:websiteweavers@gmail.com">websiteweavers101@gmail.com</a></p>
               </div>
             </div>
           </div>

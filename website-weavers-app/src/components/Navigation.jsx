@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
+import { useScroll, useMotionValueEvent } from 'framer-motion';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,9 +15,19 @@ const Navbar = () => {
       { href: '/#how-to', text: 'HOW-TO', active: 'how-to' }
     ];
     const activeSegment = useSelectedLayoutSegment()
+
+    const { scrollY } = useScroll()
+    const [scrollDown, setScrollDown] = useState("up")
+
+    useMotionValueEvent(scrollY, "change", (current) => {
+      // const diff = current - scrollY.getPrevious()
+      setScrollDown(current > 0 ? "true" : "false")
+    })
     
     return (
-        <nav className="flex flex-col items-center justify-between py-4 z-50 shadow-md bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-4 m-4 dark:mt-0 rounded-lg">
+        <nav className={`flex flex-col items-center justify-between z-50 shadow-md bg-white/80 
+                        dark:bg-gray-900/80 backdrop-blur-md sticky top-0 dark:mt-0 transition-all ease-in-ease-out 5s
+                        ${scrollDown === 'true' ? 'py-0' : 'py-4'}`}>
           <div className="container mx-auto px-6 relative">
             <div className="flex items-center justify-between h-16">
               <a href="/" className="text-2xl text-blue-600 dark:text-blue-400 font-bold justify-self-start text-left hover:text-blue-600">
