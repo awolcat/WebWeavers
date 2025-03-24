@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="flex flex-col items-start text-left md:col-span-5 lg:col-span-4 fadein-right">
               <h1 className="lg:text-6xl text-5xl mb-1 whitespace-nowrap">Let Us Build</h1>
               <h1 className="lg:text-6xl text-5xl font-bold mb-4 whitespace-nowrap">Your Website</h1>
-              <p className="text-gray-600 mb-6 text-left">
+              <p className="text-gray-600 mb-6 text-left dark:text-slate-400">
                 Elevate your digital presence with our expert website design and development.
                 We craft bespoke solutions based on client needs.
               </p>

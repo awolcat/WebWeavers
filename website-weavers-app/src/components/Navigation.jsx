@@ -26,7 +26,7 @@ const Navbar = () => {
     
     return (
         <nav className={`flex flex-col items-center justify-between z-50 shadow-md bg-white/80 
-                        dark:bg-gray-900/80 backdrop-blur-md sticky top-0 transition-all ease-in-ease-out 5s
+                        dark:bg-gray-900/80 backdrop-blur-md sticky top-0 transition-all ease-in-ease-out duration-300
                         ${scrollDown === 'true' ? 'py-0' : 'py-4'}`}>
           <div className="container mx-auto px-6 relative">
             <div className="flex items-center justify-between h-16">

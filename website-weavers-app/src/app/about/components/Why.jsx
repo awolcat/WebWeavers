@@ -20,7 +20,7 @@ const WhyUs = () => {
             ].map((item, index) => (
               <div key={index} className="p-8 border border-gray-200 rounded-lg hover:border-[#0A66C2] transition-colors">
                 <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                <p className="text-gray-600">{item.content}</p>
+                <p className="text-gray-600 dark:text-slate-400">{item.content}</p>
               </div>
             ))}
           </div>

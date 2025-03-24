@@ -58,14 +58,14 @@ const WhyUs = () => {
             <div className=''>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {reasons.map((reason, index) => (
-                  <div key={index} className={`p-8 rounded-md transition duration-300 ${activeImage === index ? 'bg-slate-200 dark:bg-gray-900 dark:border-2 dark:border-white' : 'bg-none'} hover:bg-slate-200 dark:hover:text-white dark:border-white cursor-pointer shadow-lg flex flex-col justify-center`}
+                  <div key={index} className={`p-8 rounded-md transition duration-300 ${activeImage === index ? 'bg-slate-200 dark:bg-gray-900 ' : 'bg-none'} hover:bg-slate-200 dark:hover:text-white dark:hover:bg-gray-700 dark:border-white cursor-pointer shadow-lg flex flex-col justify-center`}
                     onMouseEnter={() => setActiveImage(index)}
                     >
                     <div className='flex flex-row gap-4 mb-4 items-center'>
                       {reason.icon}  
                       <h3 className="text-xl font-bold text-left">{reason.title}</h3>
                     </div>
-                    <p className="text-gray-600 text-left">
+                    <p className="text-gray-600 text-left dark:text-slate-400">
                       {reason.description}
                     </p>
                   </div>

@@ -5,7 +5,7 @@ const Hero = () => {
           <div className="flex flex-col justify-center">
             <h1 className="text-8xl font-bold mb-8 tracking-tighter">ABOUT US</h1>
             <p className="text-lg mb-4">Web Design, Digital Development and Visibility Online</p>
-            <p className="text-md text-gray-700 w-[90%] ">
+            <p className="text-md text-gray-700 w-[90%] dark:text-slate-400">
               Modern designs featuring clean lines, neutral palettes, and
               high-quality development standards.
             </p>
