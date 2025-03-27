@@ -1,10 +1,17 @@
 import { MapPin, Mail } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faFacebook, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
+    const socials = [
+                      {link: "https://www.facebook.com/profile.php?id=61574300822119 ", icon: faFacebook},
+                      {link: "https://www.instagram.com/webweaversonline101/?hl=en", icon: faInstagram },
+                      {link: "https://www.linkedin.com/company/web-weavers-online/?viewAsMember=true", icon: faLinkedin}
+                    ];
     return (
         <footer className="bg-gray-900 text-white text-left px-0">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-12 lg:justify-items-center	">
-        <div>
+        <div className='flex flex-col'>
             <h3 className="font-bold mb-4 text-blue-600">WEBSITE WEAVERS</h3>
             <div className="flex items-start gap-2">
               <p>

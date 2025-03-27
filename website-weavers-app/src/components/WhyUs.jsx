@@ -1,9 +1,5 @@
 import { useState } from 'react';
 
-import whyUs from '../assets/images/why-us.jpeg';
-import design from '../assets/images/design.jpeg';
-import develop from '../assets/images/develop.jpeg';
-
 import { ChartPie } from 'lucide-react';
 
 
@@ -15,19 +11,19 @@ const WhyUs = () => {
           title: 'Website Design', 
           description: 'We believe in the power of design to tell your brand story, crafting unique visuals that reflect your identity and values', 
           icon: <ChartPie size='32' color='#3b82f6' />,
-          image: whyUs
+          image: '/images/whyus/web.jpg'
         },
         { 
           title: 'Showcase Your Brand',
           description: 'We work closely with you to understand your operational challenges and deliver software that addresses them effectively.',
           icon: <ChartPie size='32' color='#3b82f6' />,
-          image: design
+          image: '/images/whyus/showcase.jpg'
         },
         { 
           title: 'Meet Business Needs', 
           description: 'We combine technical expertise with creative flair to deliver seamless, high-performing websites tailored to your business needs.',
           icon: <ChartPie size='32' color='#3b82f6' />,
-          image: develop
+          image: '/images/whyus/businessneeds_nobg.png'
         },
     ];
 
@@ -48,10 +44,11 @@ const WhyUs = () => {
                 {reasons.map((reason, index) => (
                     <img
                         key={index}
-                        src={reason.image.src}
+                        src={reason.image}
                         alt={`Image ${index + 1}`}
                         className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out
-                            ${activeImage === index ? 'opacity-100' : 'opacity-0'}`}
+                            ${activeImage === index ? 'opacity-100' : 'opacity-0'}
+                            ${index === 0 ? 'object-top' : ''}`}
                     />
                 ))}
             </div>
@@ -62,7 +59,7 @@ const WhyUs = () => {
                     onMouseEnter={() => setActiveImage(index)}
                     >
                     <div className='flex flex-row gap-4 mb-4 items-center'>
-                      {reason.icon}  
+                      {/*reason.icon*/}  
                       <h3 className="text-xl font-bold text-left">{reason.title}</h3>
                     </div>
                     <p className="text-gray-600 text-left dark:text-slate-400">
