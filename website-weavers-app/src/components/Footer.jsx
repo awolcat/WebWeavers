@@ -1,6 +1,6 @@
 import { MapPin, Mail } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faFacebook, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
     const socials = [
@@ -33,9 +33,20 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4 text-blue-600">CONTACT</h3>
             <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <Mail size={20} className='text-blue-600'/>
-                <p><a href="mailto:websiteweavers@gmail.com">websiteweavers101@gmail.com</a></p>
+              <div className="flex flex-col items-start gap-4">
+                <div className="flex gap-2 items-center">
+                  <Mail size={20} className='text-blue-600'/>
+                  <p><a href="mailto:websiteweavers@gmail.com">websiteweavers101@gmail.com</a></p>
+                </div>
+                <div className='flex flex-row gap-2 justify-start'>
+                  {socials.map((social, index) => (
+                    <div key={index} className='h-4 w-4'>
+                      <a href={social.link} target="_blank">
+                            <FontAwesomeIcon size='2x' icon={social.icon} />
+                      </a>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
