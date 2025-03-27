@@ -31,7 +31,7 @@ const Navbar = () => {
           <div className="container mx-auto px-6 relative">
             <div className="flex items-center justify-between h-16">
               <a href="/" className="text-2xl text-blue-600 dark:text-blue-400 font-bold justify-self-start text-left hover:text-blue-600">
-                <div className={`transition-all ease-in fade-in duration-300 ${scrollDown === 'true' ? 'h-12' : 'h-16'}`}>
+                <div className={`transition-all ease-in fade-in duration-300 ${scrollDown === 'true' ? 'h-12' : 'h-14'}`}>
                   <img src='/weavers.png' className='h-full object-cover'/>
                 </div>
               </a>
