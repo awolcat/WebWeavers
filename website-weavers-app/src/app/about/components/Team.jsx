@@ -48,7 +48,7 @@ const Team = () => {
                         />
                     </div>
                     <h3 className="text-2xl font-bold mt-4 text-center">{member.name}</h3>
-                    <p className="uppercase text-gray-600 text-center text-md/2">{member.role.toUpperCase()}</p>
+                    <p className="uppercase text-gray-600 text-center text-md/2 dark:text-slate-400">{member.role.toUpperCase()}</p>
                     <div>
                         <a href={member.linkedIn} target="_blank">
                             <FontAwesomeIcon size='2x' icon={faLinkedin} />

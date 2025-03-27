@@ -27,7 +27,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
             <h2 className="text-5xl font-bold mb-8">Our Services</h2>
-            <p className="text-gray-700 mb-8">
+            <p className="text-gray-700 mb-8 dark:text-slate-400">
               At WebWeaversOnline, we offer a comprehensive range of services to bring your digital vision to life. 
               Each service is tailored to meet the unique needs of our clients, ensuring a seamless and satisfying experience.
             </p>
@@ -44,7 +44,7 @@ const Services = () => {
             {services.map((service, index) => (
                 <div className='border-black' key={index}>
                     <h3 className="text-2xl font-bold mb-4 uppercase">{service.name.toUpperCase()}</h3>
-                    <p className="text-gray-700">{service.description}</p>
+                    <p className="text-gray-700 dark:text-slate-400">{service.description}</p>
                 </div>
             ))}
             

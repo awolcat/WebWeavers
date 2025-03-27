@@ -69,6 +69,10 @@ button:focus-visible {
   }
 }
 
+  @keyframes fillLeftToRight {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
 
   @keyframes lineProgressVertical {
     from { height: 0; }

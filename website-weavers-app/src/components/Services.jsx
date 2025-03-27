@@ -32,11 +32,7 @@ const Services = ({ products }) => {
   return (
     <section id="services" className="py-16 bg-[#191919] text-white">
       <div className="container mx-auto px-4">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-[#70B5F9]">🔧</span>
-          <span className="text-[#70B5F9]">Services</span>
-        </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 items-center mb-12">
           <h2 className="text-5xl font-bold text-left">Our Services.</h2>
           <div className="md:justify-self-end">
