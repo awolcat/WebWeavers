@@ -42,7 +42,7 @@ export default function Footer() {
                   {socials.map((social, index) => (
                     <div key={index} className='h-4 w-4'>
                       <a href={social.link} target="_blank">
-                            <FontAwesomeIcon size='2x' icon={social.icon} />
+                            <FontAwesomeIcon icon={social.icon} />
                       </a>
                     </div>
                   ))}
