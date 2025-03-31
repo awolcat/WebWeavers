@@ -30,8 +30,8 @@ const Navbar = () => {
                         ${scrollDown === 'true' ? 'py-0' : 'py-4'}`}>
           <div className="container mx-auto px-6 relative">
             <div className="flex items-center justify-between h-16">
-              <a href="/" className="text-2xl text-blue-600 dark:text-blue-400 font-bold justify-self-start text-left hover:text-blue-600">
-                <div className={`transition-all ease-in fade-in duration-300 ${scrollDown === 'true' ? 'h-12' : 'h-14'}`}>
+              <a href="/" className="text-2xl text-blue-600 dark:bg-slate-300/50 dark:p-2 dark:rounded-md font-bold justify-self-start text-left hover:text-blue-600">
+                <div className={`transition-all ease-in fade-in duration-300 ${scrollDown === 'true' ? 'h-12 dark:h-11' : 'h-14 dark:h-13'}`}>
                   <img src='/weavers.png' className='h-full object-cover'/>
                 </div>
               </a>
@@ -54,7 +54,7 @@ const Navbar = () => {
               <div className="flex items-center gap-4">
                 {/* Mobile Menu Button */}
                 <button
-                  className="lg:hidden"
+                  className="lg:hidden dark:bg-gray-900"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                   {isMenuOpen ? <X /> : <Menu />}
@@ -76,7 +76,7 @@ const Navbar = () => {
             isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
           }`}>
             <div className="bg-white dark:bg-gray-800 text-slate-600 dark:text-gray-200 shadow-lg rounded-lg mt-2">
-              <div className="pb-4 space-y-2">
+              <div className="pb-4 space-y-2 flex flex-col items-center justify-center pt-4">
                 {navLinks.map(link => (
                   <a
                     key={link.href}
